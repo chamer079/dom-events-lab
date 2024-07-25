@@ -21,21 +21,36 @@ const equalEl = document.querySelector(".equals")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-numEl.forEach((num) => {
-    num.addEventListener("click", (event) => {
-        let currentNum = event.target.textContent
-
-        displayEl.textContent = currentNum
+const calculations = () => {
+    numEl.forEach((num) => {
+        num.addEventListener("click", (event) => {
+            let currentNum = event.target.textContent
+    
+            displayEl.textContent = currentNum
+        })
     })
-})
-
-operatorEl.forEach((operator) => {
-    operator.addEventListener("click", (event) => {
-        let currentOperator = event.target.textContent
-
-        displayEl.textContent = currentOperator
+    
+    operatorEl.forEach((operator) => {
+        operator.addEventListener("click", (event) => {
+            let currentOperator = event.target.textContent
+    
+            displayEl.textContent = currentOperator
+        })
     })
-})
+
+    equalEl.addEventListener("click", (event) =>{
+        console.log(event.target)
+    })
+
+    if(operatorEl.event === "+"){       //<- revisit: perhaps place in a new function?
+        equalEl.textContent = currentNum + currentNum
+        console.log(event.target)
+    }
+
+}
+
+calculations()
+
 
 
 
