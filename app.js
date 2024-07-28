@@ -23,15 +23,19 @@ const equalEl = document.querySelector(".equals")
 /*----------------------------- Event Listeners -----------------------------*/
 numEl.forEach((num) => {
     num.addEventListener("click", (event) => {
+        console.log(num.textContent)
         let currentNum = event.target.textContent
-
+        
+        
         displayEl.textContent = currentNum
+
+
     })
 })
-
 operatorEl.forEach((operator) => {
     operator.addEventListener("click", (event) => {
         let currentOperator = event.target.textContent
+        console.log(operator.textContent)
 
         displayEl.textContent = currentOperator
     })
@@ -46,15 +50,7 @@ equalEl.addEventListener("click", (event) =>{
 
 
 /*-------------------------------- Functions --------------------------------*/
-// const calculations = () => {
 
-//     if(operatorEl.event === "+"){       //<- revisit: perhaps place in a new function?
-//         equalEl.textContent = currentNum + currentNum
-//         console.log(event.target)
-//     }
+    
 
-// }
-
-// calculations()
-
-  
+    
